@@ -125,4 +125,3 @@ You can run tests:
 ```bash
 pytest tests/
 ```
-
