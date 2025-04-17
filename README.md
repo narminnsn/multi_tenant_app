@@ -14,14 +14,6 @@
 This project is a multi-tenant web application. It allows each tenant to independently manage their data and configurations. The application is built using FastAPI, PostgreSQL, and Tortoise ORM.
 
 ## Features
-Tenant Isolation:
-
-Tenant-Specific User Management: 
-
-Multi-Tenant Authentication: 
-
-Dynamic Tenant Configuration: 
-
 - **Tenant Isolation**:  Each tenant has isolated data and configurations, ensuring data privacy and independence..
 - **Tenant-Specific User Management**: Each tenant can manage their users separately.
 - **Multi-Tenant Authentication**: Support for tenant-specific authentication mechanisms.
