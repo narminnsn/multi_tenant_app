@@ -25,7 +25,6 @@ async def test_core_login(client):
 
 @pytest.mark.asyncio
 async def test_create_organization(client):
-    # önce login ile token al
     login = await client.post(
         "/api/auth/login", json={"username": "coreuser", "password": "password"}
     )
