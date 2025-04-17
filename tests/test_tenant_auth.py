@@ -1,6 +1,6 @@
 import pytest
 
-TENANT = "3"  # testte oluşturulan tenant id
+TENANT = "1"  # testte oluşturulan tenant id
 
 
 @pytest.fixture
