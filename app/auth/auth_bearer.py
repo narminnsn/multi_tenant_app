@@ -1,6 +1,6 @@
 from fastapi import Request, HTTPException
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from app.auth.jwt import decode_access_token  # JWT decoding işlemi
+from app.auth.jwt import decode_access_token
 
 
 class JWTBearer(HTTPBearer):
@@ -28,7 +28,6 @@ class JWTBearer(HTTPBearer):
 
     def verify_jwt(self, jwtoken: str):
         try:
-            # Token'ı decode et ve kullanıcı bilgilerini döndür
             payload = decode_access_token(jwtoken)
             return payload
         except:

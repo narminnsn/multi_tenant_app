@@ -1,6 +1,6 @@
 import pytest
 
-TENANT = "1"  # testte oluşturulan tenant id
+TENANT = "1"
 
 
 @pytest.fixture
@@ -12,7 +12,7 @@ async def tenant_token(client):
     )
     assert response.status_code == 200
     tenant_token = response.json().get("access_token")
-    assert tenant_token is not None  # Token'ın alındığını kontrol et
+    assert tenant_token is not None
     return tenant_token
 
 

@@ -34,7 +34,6 @@ async def update_me(
     token: str = Depends(JWTBearer()),
     db=Depends(get_tenant_db),
 ):
-    # Token'ı decode et
     tenant_repository = TenantUserRepository()
     user_id = decode_access_token(token)
     user = await tenant_repository.edit_user_by_id(

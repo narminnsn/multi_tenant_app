@@ -1,6 +1,5 @@
 import logging
 
-# Logger'ı ayarlayalım
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 

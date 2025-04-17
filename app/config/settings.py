@@ -3,7 +3,6 @@ from tortoise import Tortoise
 from typing import ClassVar
 from pydantic import Extra
 
-# Tortoise ORM yapılandırmasını burada modül seviyesinde tanımlıyoruz
 # TORTOISE_ORM = {
 #     "connections": {
 #         "default": "postgres://multi_tenant:zQhGyUUkeNov9SQ@localhost/multi_tenant",
@@ -15,7 +14,6 @@ from pydantic import Extra
 #         },
 #     },
 # }
-# DATABASE_URL=postgres://multi_tenant:zQhGyUUkeNov9SQ@localhost/multi_tenant
 
 
 class Settings(BaseSettings):
@@ -34,9 +32,8 @@ class Settings(BaseSettings):
                 f"{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}")
 
     class Config:
-        env_file = "./.env"  # .env dosyasını doğru konumda kullandığınızdan emin olun
+        env_file = "./.env"
         env_file_encoding = "utf-8"
-        # extra = Extra.allow  # Extra input'ların kabul edilmesine izin veriyoruz
 
 
 settings = Settings()
